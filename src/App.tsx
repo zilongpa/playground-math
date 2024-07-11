@@ -12,6 +12,8 @@ import {
 import '@xyflow/react/dist/style.css';
 import CounterNode from "./components/nodes/counter.tsx";
 
+const proOptions = { hideAttribution: true };
+
 const nodeTypes = { counterNode: CounterNode };
 
 const initialNodes = [
@@ -32,8 +34,10 @@ export default function App() {
 
   
   return (
-    <div style={{ width: '100vw', height: '100vh' }}>
+    <div style={{ width: '100wh', height: '100vh'}}>
       <ReactFlow
+      fitView
+      proOptions={proOptions}
         nodes={nodes}
         edges={edges}
         nodeTypes={nodeTypes}
